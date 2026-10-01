@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>nouhes | 매일 쓰는 집 안의 물건</title>
-  <meta name="description" content="nouhes는 주방, 욕실, 수납, 청소, 세탁까지 매일 손이 가는 생활용품을 만드는 브랜드입니다.">
+  <title>nouhes | 자연에서 온 메쉬 수세미</title>
+  <meta name="description" content="누헤스는 옥수수에서 온 섬유로 메쉬 수세미를 만드는 브랜드입니다.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,16 +13,13 @@
   <p class="notice light-zone">새 소식은 뉴스레터로 가장 먼저 알려 드립니다.</p>
 
   <header class="nav" id="top">
-    <a class="nav__logo" href="#top" aria-label="nouhes 홈">nouhes</a>
+    <a class="nav__logo" href="index.html" aria-label="nouhes 홈">nouhes</a>
     <nav class="nav__links" aria-label="주요 메뉴">
-      <a href="#picks">주방</a>
-      <a href="#picks">욕실</a>
-      <a href="#picks">수납</a>
-      <a href="#browse">청소</a>
-      <a href="#browse">세탁</a>
-      <a href="#story">이야기</a>
+      <a href="index.html" aria-current="page">홈</a>
+      <a href="product.html">제품</a>
+      <a href="about.html">누헤스</a>
     </nav>
-    <a class="nav__side" href="#news">소식 받기</a>
+    <a class="nav__side js-buy" href="index.html#news" target="_self">구매하기<span aria-hidden="true"> ↗</span></a>
   </header>
 
   <main>
@@ -36,14 +33,14 @@
       <div class="hero__copy">
         <p class="hero__label">nouhes</p>
         <h1>매일 쓰는 것들, 조용히 좋게.</h1>
-        <p class="hero__sub">주방부터 욕실까지, 집 안의 하루를 편하게 만드는 물건을 천천히 만듭니다.</p>
-        <a class="btn btn--light" href="#picks">제품 보기<span aria-hidden="true">→</span></a>
+        <p class="hero__sub">옥수수에서 온 섬유로, 가장 먼저 주방의 것부터 천천히 만듭니다.</p>
+        <a class="btn btn--light js-buy" href="index.html#news">구매하기<span aria-hidden="true">↗</span></a>
       </div>
       <button class="hero__toggle" id="heroToggle" type="button" aria-label="영상 일시정지">일시정지</button>
     </section>
 
-    <!-- 2. 좌우 반반: 사진 + 탭이 있는 제품 줄 -->
-    <section class="split" id="picks">
+    <!-- 2. 좌우 반반: 공간 사진 + 대표 제품 한 개 (여러 각도) -->
+    <section class="split" id="product">
       <!-- TODO: 공간 사진 (세로 4:5 이상, 1200x1500) -->
       <figure class="split__photo slot" role="img" aria-label="공간 사진 자리">
         <figcaption class="slot__cap">공간 사진<span>4:5 · 1200×1500</span></figcaption>
@@ -55,111 +52,88 @@
 
       <div class="split__panel light-zone">
         <p class="label">대표 제품</p>
-        <h2 class="serif">매일 쓰는 물건, 한눈에</h2>
-        <p class="split__lead">자주 쓰는 공간부터 골라 보세요.</p>
+        <h2 class="serif">자연에서 온 메쉬 수세미</h2>
+        <p class="split__lead">빠르게 마르고, 촘촘하게 짜인 수세미입니다.</p>
 
-        <div class="tabs" role="tablist" aria-label="제품 분류">
-          <button class="tab" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1" type="button">주방</button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" type="button" tabindex="-1">욕실</button>
-          <button class="tab" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3" type="button" tabindex="-1">수납</button>
-        </div>
-
-        <!-- TODO: 제품 사진 (투명 배경 또는 단색 배경, 정사각 1:1, 1000x1000). 제품명과 설명은 임시 문구 -->
-        <div class="products" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>주방 제품 01</h3><p>소재와 쓰임을 한 줄로</p></article>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>주방 제품 02</h3><p>소재와 쓰임을 한 줄로</p></article>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>주방 제품 03</h3><p>소재와 쓰임을 한 줄로</p></article>
-        </div>
-        <div class="products" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>욕실 제품 01</h3><p>소재와 쓰임을 한 줄로</p></article>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>욕실 제품 02</h3><p>소재와 쓰임을 한 줄로</p></article>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>욕실 제품 03</h3><p>소재와 쓰임을 한 줄로</p></article>
-        </div>
-        <div class="products" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>수납 제품 01</h3><p>소재와 쓰임을 한 줄로</p></article>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>수납 제품 02</h3><p>소재와 쓰임을 한 줄로</p></article>
-          <article class="prod"><div class="prod__img"><span>제품 사진</span></div><h3>수납 제품 03</h3><p>소재와 쓰임을 한 줄로</p></article>
-        </div>
+        <!-- TODO: 제품 사진 3장 (정면, 측면, 사용 장면 등 서로 다른 각도, 3:4, 900x1200) -->
+        <ul class="angles" aria-label="제품 사진">
+          <li class="slot slot--a"><span>정면</span></li>
+          <li class="slot slot--b"><span>측면</span></li>
+          <li class="slot slot--d"><span>사용 장면</span></li>
+        </ul>
+        <a class="btn btn--dark" href="product.html">자세히 보기<span aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <!-- 3. 분류별 둘러보기: 같은 크기 사진 5장 -->
-    <section class="browse section" id="browse">
-      <h2 class="serif">분류별로 둘러보기</h2>
-      <!-- TODO: 분류 사진 5장 (4:3, 900x675) -->
-      <ul class="thumbs" tabindex="0" aria-label="제품 분류">
-        <li><a href="#news"><div class="thumb slot slot--a"></div><span>주방</span></a></li>
-        <li><a href="#news"><div class="thumb slot slot--b"></div><span>욕실</span></a></li>
-        <li><a href="#news"><div class="thumb slot slot--c"></div><span>수납</span></a></li>
-        <li><a href="#news"><div class="thumb slot slot--d"></div><span>청소</span></a></li>
-        <li><a href="#news"><div class="thumb slot slot--e"></div><span>세탁</span></a></li>
-      </ul>
+    <!-- 3. 제품 로드맵: 첫 칸만 판매 중, 나머지는 준비 중 -->
+    <section class="roadmap section" id="roadmap">
+      <h2 class="serif">앞으로 만들어 갈 물건</h2>
+      <p class="roadmap__sub">하나씩, 천천히 채워 갑니다.</p>
+      <ol class="steps">
+        <li>
+          <a class="step step--on" href="product.html">
+            <!-- TODO: 수세미 사진 (4:3, 900x675) -->
+            <span class="step__img slot slot--a" aria-hidden="true"></span>
+            <span class="step__no">01 · 지금</span>
+            <span class="step__name">자연에서 온 메쉬 수세미</span>
+          </a>
+        </li>
+        <li><div class="step step--off" aria-disabled="true"><span class="step__img" aria-hidden="true"></span><span class="step__no">02 · 준비 중</span><span class="step__name">한지 샤워타올</span></div></li>
+        <li><div class="step step--off" aria-disabled="true"><span class="step__img" aria-hidden="true"></span><span class="step__no">03 · 준비 중</span><span class="step__name">핸드워시 · 설거지비누</span></div></li>
+        <li><div class="step step--off" aria-disabled="true"><span class="step__img" aria-hidden="true"></span><span class="step__no">04 · 준비 중</span><span class="step__name">두피 화장품</span></div></li>
+        <li><div class="step step--off" aria-disabled="true"><span class="step__img" aria-hidden="true"></span><span class="step__no">05 · 준비 중</span><span class="step__name">방향제</span></div></li>
+      </ol>
     </section>
 
-    <!-- 4. 큰 배경 속 작은 제품 2x2 (애플식 구성) -->
-    <section class="tiles" aria-label="추천 제품">
-      <!-- TODO: 제품 사진 4장 (배경 위에 제품이 작게, 1600x1000) -->
+    <!-- 4. 제품 단독 소개: 큰 배경 속 작은 제품 -->
+    <section class="tiles" aria-label="제품 소개">
+      <!-- TODO: 제품 사진 (배경 위에 제품이 작게, 1600x1000) -->
       <article class="tile tile--1 light-zone">
-        <h3 class="serif">주방</h3><p>조리부터 정리까지.</p>
-        <a class="btn btn--dark" href="#news">자세히 보기<span aria-hidden="true">→</span></a>
-        <div class="tile__prod"><span>제품 사진</span></div>
-      </article>
-      <article class="tile tile--2">
-        <h3 class="serif">욕실</h3><p>젖어도 금방 마르게.</p>
-        <a class="btn btn--dark" href="#news">자세히 보기<span aria-hidden="true">→</span></a>
-        <div class="tile__prod"><span>제품 사진</span></div>
-      </article>
-      <article class="tile tile--3">
-        <h3 class="serif">수납</h3><p>보이는 곳도 단정하게.</p>
-        <a class="btn btn--dark" href="#news">자세히 보기<span aria-hidden="true">→</span></a>
-        <div class="tile__prod"><span>제품 사진</span></div>
-      </article>
-      <article class="tile tile--4 light-zone">
-        <h3 class="serif">청소</h3><p>꺼내 쓰기 쉬운 도구.</p>
-        <a class="btn btn--dark" href="#news">자세히 보기<span aria-hidden="true">→</span></a>
+        <h3 class="serif">자연에서 온 메쉬 수세미</h3>
+        <p>옥수수에서 온 섬유로 만든, 빠르게 마르는 수세미.</p>
+        <div class="tile__btns">
+          <a class="btn btn--dark" href="product.html">자세히 보기<span aria-hidden="true">→</span></a>
+          <a class="btn btn--dark js-buy" href="index.html#news">구매하기<span aria-hidden="true">↗</span></a>
+        </div>
         <div class="tile__prod"><span>제품 사진</span></div>
       </article>
     </section>
 
-    <!-- 5. 글과 사진이 번갈아 나오는 두 칸 -->
+    <!-- 5. 글과 사진이 번갈아 나오는 두 칸 (근거: 빠른 건조, 조밀한 직조) -->
+    <!-- TODO(확인 필요): 소재·안전 관련 시험/인증 문구는 정확한 명칭과 성적서를 확인한 뒤 이 자리나 제품 페이지에 넣습니다. -->
     <section class="feature">
-      <!-- TODO: 약속 사진 2장 (3:2, 1800x1200) -->
+      <!-- TODO: 사진 2장 (3:2, 1800x1200) -->
       <div class="feature__row">
         <div class="feature__text">
-          <p class="label">첫 번째 약속</p>
-          <h2 class="serif">쓰는 사람 기준으로</h2>
-          <p>예쁜 것보다 먼저, 손에 쥐었을 때 편한지 확인합니다.</p>
-          <a class="btn btn--dark" href="#story">이야기 보기<span aria-hidden="true">→</span></a>
+          <h2 class="serif">빠르게 마르도록</h2>
+          <p>물에 닿는 시간이 긴 도구라서, 빠르게 마르는 구조로 만들었습니다.</p>
         </div>
-        <figure class="slot slot--wide" role="img" aria-label="약속 사진 자리"><figcaption class="slot__cap">약속 사진<span>3:2 · 1800×1200</span></figcaption></figure>
+        <figure class="slot slot--wide" role="img" aria-label="사진 자리"><figcaption class="slot__cap">사진<span>3:2 · 1800×1200</span></figcaption></figure>
       </div>
       <div class="feature__row feature__row--flip">
         <div class="feature__text">
-          <p class="label">두 번째 약속</p>
-          <h2 class="serif">오래 쓸 수 있게</h2>
-          <p>닳고 바래도 괜찮은 소재를 고르고, 부품은 따로 바꿀 수 있게 만듭니다.</p>
+          <h2 class="serif">촘촘하게 짜서</h2>
+          <p>조밀한 직조로 만들어, 오래 두고 쓰기 좋은 수세미입니다.</p>
         </div>
-        <figure class="slot slot--wide slot--b" role="img" aria-label="약속 사진 자리"><figcaption class="slot__cap">약속 사진<span>3:2 · 1800×1200</span></figcaption></figure>
+        <figure class="slot slot--wide slot--b" role="img" aria-label="사진 자리"><figcaption class="slot__cap">사진<span>3:2 · 1800×1200</span></figcaption></figure>
       </div>
     </section>
 
     <!-- 6. 어두운 전체 폭 모듈 -->
     <section class="dark" id="story">
-      <p class="label label--light">세 번째 약속</p>
-      <h2 class="serif">덜 만들고, 덜 버리게</h2>
-      <p>꼭 필요한 종류만 만들어, 집 안에 쌓이는 물건을 줄입니다.</p>
+      <h2 class="serif">오래 쓰는 물건을 만듭니다</h2>
+      <p>꼭 필요한 것부터, 하나씩 천천히.</p>
       <div class="dark__prod"><span>제품 사진 · 어두운 배경</span></div>
     </section>
 
-    <!-- 7. 읽을거리 -->
-    <section class="reading light-zone">
+    <!-- 7. 읽을거리: 실제 글이 생길 때까지 숨김 (hidden 속성을 지우면 다시 보입니다) -->
+    <section class="reading light-zone" hidden>
       <div class="section">
         <h2 class="serif">읽을거리</h2>
-        <!-- TODO: 글 3편의 사진과 제목 (임시 문구. 실제 글로 교체) -->
         <ul class="cards">
-          <li><a href="#news"><div class="slot slot--a"></div><p class="cards__tag">정리</p><h3>글 제목이 들어갑니다</h3><p class="cards__meta">5분 읽기</p></a></li>
-          <li><a href="#news"><div class="slot slot--d"></div><p class="cards__tag">소재</p><h3>글 제목이 들어갑니다</h3><p class="cards__meta">5분 읽기</p></a></li>
-          <li><a href="#news"><div class="slot slot--c"></div><p class="cards__tag">생활</p><h3>글 제목이 들어갑니다</h3><p class="cards__meta">5분 읽기</p></a></li>
+          <li><a href="#news"><div class="slot slot--a"></div><p class="cards__tag">분류</p><h3>글 제목</h3><p class="cards__meta">5분 읽기</p></a></li>
+          <li><a href="#news"><div class="slot slot--d"></div><p class="cards__tag">분류</p><h3>글 제목</h3><p class="cards__meta">5분 읽기</p></a></li>
+          <li><a href="#news"><div class="slot slot--c"></div><p class="cards__tag">분류</p><h3>글 제목</h3><p class="cards__meta">5분 읽기</p></a></li>
         </ul>
       </div>
     </section>
@@ -186,7 +160,11 @@
   </main>
 
   <footer class="footer light-zone">
-    <p class="footer__logo">nouhes</p>
+    <div class="footer__main">
+      <p class="footer__logo">nouhes</p>
+      <p class="footer__info">고객센터 <a href="tel:07079549794">070-7954-9794</a></p>
+      <!-- TODO: 카카오톡 채널 링크, 사업자 정보(상호, 대표자, 사업자등록번호, 통신판매업 신고번호, 주소, 이메일)를 받으면 여기에 추가합니다. -->
+    </div>
     <p class="footer__copy">&copy; 2026 nouhes. All rights reserved.</p>
   </footer>
 
