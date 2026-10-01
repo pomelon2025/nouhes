@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nouhes | 매일 쓰는 집 안의 물건</title>
+  <meta name="description" content="nouhes는 주방, 욕실, 수납, 청소 등 매일 손이 가는 생활용품을 만드는 브랜드입니다.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav" id="top">
+    <a class="nav__logo" href="#top" aria-label="nouhes 홈">nouhes</a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="#products">제품</a>
+      <a href="#principles">약속</a>
+      <a href="#story">이야기</a>
+      <a class="nav__cta" href="#news">소식 받기</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. HERO: 좌우 비대칭 -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="hero__label">생활용품 브랜드</p>
+        <h1>매일 손이 가는 물건을,<br>조금 더 오래 곁에.</h1>
+        <p class="hero__sub">주방부터 욕실까지, 집 안의 하루를 편하게 만드는 물건을 천천히 만듭니다.</p>
+        <a class="btn btn--primary" href="#products">제품 보기</a>
+      </div>
+      <!-- TODO: 히어로 대표 사진 (세로형 4:5, 1200x1500). 실제 제품 사진으로 교체 -->
+      <figure class="slot slot--hero" role="img" aria-label="대표 제품 사진 자리">
+        <figcaption>대표 제품 사진<span>4:5 · 1200×1500</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 2. MARQUEE: 카테고리 흐름 -->
+    <section class="marquee" aria-label="제품 분류">
+      <div class="marquee__track">
+        <ul>
+          <li>주방</li><li>욕실</li><li>수납</li><li>청소</li><li>세탁</li><li>거실</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>주방</li><li>욕실</li><li>수납</li><li>청소</li><li>세탁</li><li>거실</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. PRODUCTS: 5칸 벤토 -->
+    <section class="products" id="products">
+      <h2>집 안 구석구석</h2>
+      <p class="section-sub">자주 쓰는 공간부터, 하나씩 차근차근 채워 갑니다.</p>
+
+      <div class="bento">
+        <!-- TODO: 각 카테고리 대표 사진 5장 (실제 제품 사진으로 교체) -->
+        <a class="tile tile--a" href="#news">
+          <span class="tile__name">주방</span>
+          <span class="tile__note">조리부터 정리까지</span>
+        </a>
+        <a class="tile tile--b" href="#news">
+          <span class="tile__name">욕실</span>
+          <span class="tile__note">젖어도 금방 마르게</span>
+        </a>
+        <a class="tile tile--c" href="#news">
+          <span class="tile__name">수납</span>
+          <span class="tile__note">보이는 곳도 단정하게</span>
+        </a>
+        <a class="tile tile--d" href="#news">
+          <span class="tile__name">청소</span>
+          <span class="tile__note">꺼내 쓰기 쉬운 도구</span>
+        </a>
+        <a class="tile tile--e" href="#news">
+          <span class="tile__name">세탁</span>
+          <span class="tile__note">빨래의 시작과 끝</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. PRINCIPLES: 번호 목록 (카드 없이 구분선) -->
+    <section class="principles" id="principles">
+      <h2>nouhes의 세 가지 약속</h2>
+      <ol class="rows">
+        <li>
+          <span class="rows__num">01</span>
+          <h3>쓰는 사람 기준으로</h3>
+          <p>예쁜 것보다 먼저, 손에 쥐었을 때 편한지 확인합니다.</p>
+        </li>
+        <li>
+          <span class="rows__num">02</span>
+          <h3>오래 쓸 수 있게</h3>
+          <p>닳고 바래도 괜찮은 소재를 고르고, 부품은 따로 바꿀 수 있게 만듭니다.</p>
+        </li>
+        <li>
+          <span class="rows__num">03</span>
+          <h3>덜 만들고 덜 버리게</h3>
+          <p>꼭 필요한 종류만 만들어, 집 안에 쌓이는 물건을 줄입니다.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 5. STORY: 전폭 이미지 + 큰 문장 -->
+    <section class="story" id="story">
+      <!-- TODO: 브랜드 이야기 와이드 사진 (16:9, 2000x1125) -->
+      <figure class="slot slot--wide" role="img" aria-label="브랜드 이야기 사진 자리">
+        <figcaption>브랜드 이야기 사진<span>16:9 · 2000×1125</span></figcaption>
+      </figure>
+      <blockquote>
+        <p>좋은 물건은 눈에 띄기보다, 없으면 허전한 쪽에 가깝다고 생각합니다.</p>
+      </blockquote>
+    </section>
+
+    <!-- 6. NEWSLETTER: 입력 폼 (오류/성공 상태 포함) -->
+    <section class="news" id="news">
+      <div class="news__copy">
+        <h2>새 물건이 나오면<br>먼저 알려 드릴게요</h2>
+        <p>한 달에 한 번, 새 제품과 이야기만 보냅니다.</p>
+      </div>
+      <form class="form" novalidate>
+        <label for="email">이메일 주소</label>
+        <div class="form__row">
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
+                 aria-describedby="email-help email-error" required>
+          <button class="btn btn--primary" type="submit">신청하기</button>
+        </div>
+        <p class="form__help" id="email-help">예: name@example.com</p>
+        <p class="form__error" id="email-error" role="alert" hidden></p>
+        <p class="form__ok" id="email-ok" role="status" hidden>신청이 접수되었습니다. 곧 소식 드릴게요.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">nouhes</p>
+    <p class="footer__copy">&copy; 2026 nouhes. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
