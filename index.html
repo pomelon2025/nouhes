@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>nouhes | 매일 쓰는 집 안의 물건</title>
-  <meta name="description" content="nouhes는 주방, 욕실, 수납, 청소 등 매일 손이 가는 생활용품을 만드는 브랜드입니다.">
+  <meta name="description" content="nouhes는 주방, 욕실, 수납, 청소, 세탁까지 매일 손이 가는 생활용품을 만드는 브랜드입니다.">
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,112 +16,94 @@
       <a href="#products">제품</a>
       <a href="#principles">약속</a>
       <a href="#story">이야기</a>
-      <a class="nav__cta" href="#news">소식 받기</a>
     </nav>
+    <a class="btn btn--small" href="#news">소식 받기</a>
   </header>
 
   <main>
-    <!-- 1. HERO: 좌우 비대칭 -->
+    <!-- 1. HERO: 초대형 제목 + 겹쳐진 사진 두 장 -->
     <section class="hero">
-      <div class="hero__copy">
-        <p class="hero__label">생활용품 브랜드</p>
-        <h1>매일 손이 가는 물건을,<br>조금 더 오래 곁에.</h1>
+      <p class="hero__label">생활용품 브랜드</p>
+      <h1 class="hero__title">매일 쓰는 것들,<br>조용히 <em>좋게.</em></h1>
+      <div class="hero__row">
         <p class="hero__sub">주방부터 욕실까지, 집 안의 하루를 편하게 만드는 물건을 천천히 만듭니다.</p>
-        <a class="btn btn--primary" href="#products">제품 보기</a>
+        <a class="btn" href="#products">제품 보기</a>
       </div>
-      <!-- TODO: 히어로 대표 사진 (세로형 4:5, 1200x1500). 실제 제품 사진으로 교체 -->
-      <figure class="slot slot--hero" role="img" aria-label="대표 제품 사진 자리">
-        <figcaption>대표 제품 사진<span>4:5 · 1200×1500</span></figcaption>
-      </figure>
+
+      <!-- TODO: 히어로 사진 2장. 큰 사진(4:5, 1200x1500)과 작은 사진(1:1, 800x800) -->
+      <div class="hero__media" aria-hidden="true">
+        <figure class="slot slot--big"><figcaption>대표 제품 사진<span>4:5 · 1200×1500</span></figcaption></figure>
+        <figure class="slot slot--small"><figcaption>사용 장면<span>1:1 · 800×800</span></figcaption></figure>
+      </div>
     </section>
 
-    <!-- 2. MARQUEE: 카테고리 흐름 -->
+    <!-- 2. MARQUEE: 외곽선 글자 띠 -->
     <section class="marquee" aria-label="제품 분류">
-      <div class="marquee__track">
-        <ul>
-          <li>주방</li><li>욕실</li><li>수납</li><li>청소</li><li>세탁</li><li>거실</li>
-        </ul>
-        <ul aria-hidden="true">
-          <li>주방</li><li>욕실</li><li>수납</li><li>청소</li><li>세탁</li><li>거실</li>
-        </ul>
+      <div class="marquee__track" aria-hidden="true">
+        <span>주방</span><span>욕실</span><span>수납</span><span>청소</span><span>세탁</span>
+        <span>주방</span><span>욕실</span><span>수납</span><span>청소</span><span>세탁</span>
+        <span>주방</span><span>욕실</span><span>수납</span><span>청소</span><span>세탁</span>
+        <span>주방</span><span>욕실</span><span>수납</span><span>청소</span><span>세탁</span>
       </div>
     </section>
 
-    <!-- 3. PRODUCTS: 5칸 벤토 -->
+    <!-- 3. PRODUCTS: 가로로 넘겨 보는 큰 카드 (스크롤 스냅) -->
     <section class="products" id="products">
-      <h2>집 안 구석구석</h2>
-      <p class="section-sub">자주 쓰는 공간부터, 하나씩 차근차근 채워 갑니다.</p>
-
-      <div class="bento">
-        <!-- TODO: 각 카테고리 대표 사진 5장 (실제 제품 사진으로 교체) -->
-        <a class="tile tile--a" href="#news">
-          <span class="tile__name">주방</span>
-          <span class="tile__note">조리부터 정리까지</span>
-        </a>
-        <a class="tile tile--b" href="#news">
-          <span class="tile__name">욕실</span>
-          <span class="tile__note">젖어도 금방 마르게</span>
-        </a>
-        <a class="tile tile--c" href="#news">
-          <span class="tile__name">수납</span>
-          <span class="tile__note">보이는 곳도 단정하게</span>
-        </a>
-        <a class="tile tile--d" href="#news">
-          <span class="tile__name">청소</span>
-          <span class="tile__note">꺼내 쓰기 쉬운 도구</span>
-        </a>
-        <a class="tile tile--e" href="#news">
-          <span class="tile__name">세탁</span>
-          <span class="tile__note">빨래의 시작과 끝</span>
-        </a>
+      <div class="products__head">
+        <h2>집 안 구석구석</h2>
+        <p>옆으로 넘겨 보세요.</p>
       </div>
+      <!-- TODO: 카테고리별 사진 5장 (4:5, 1200x1500) -->
+      <ul class="rail" tabindex="0" aria-label="제품 카테고리 목록">
+        <li><a class="card card--1" href="#news"><span class="card__no">01</span><span class="card__name">주방</span><span class="card__note">조리부터 정리까지</span></a></li>
+        <li><a class="card card--2" href="#news"><span class="card__no">02</span><span class="card__name">욕실</span><span class="card__note">젖어도 금방 마르게</span></a></li>
+        <li><a class="card card--3" href="#news"><span class="card__no">03</span><span class="card__name">수납</span><span class="card__note">보이는 곳도 단정하게</span></a></li>
+        <li><a class="card card--4" href="#news"><span class="card__no">04</span><span class="card__name">청소</span><span class="card__note">꺼내 쓰기 쉬운 도구</span></a></li>
+        <li><a class="card card--5" href="#news"><span class="card__no">05</span><span class="card__name">세탁</span><span class="card__note">빨래의 시작과 끝</span></a></li>
+      </ul>
     </section>
 
-    <!-- 4. PRINCIPLES: 번호 목록 (카드 없이 구분선) -->
+    <!-- 4. PRINCIPLES: 왼쪽 제목 고정 + 오른쪽 큰 문장 -->
     <section class="principles" id="principles">
-      <h2>nouhes의 세 가지 약속</h2>
-      <ol class="rows">
-        <li>
-          <span class="rows__num">01</span>
+      <h2 class="principles__title">nouhes의<br>세 가지 약속</h2>
+      <ol class="pledges">
+        <li class="pledge">
+          <span class="pledge__no">01</span>
           <h3>쓰는 사람 기준으로</h3>
           <p>예쁜 것보다 먼저, 손에 쥐었을 때 편한지 확인합니다.</p>
         </li>
-        <li>
-          <span class="rows__num">02</span>
+        <li class="pledge">
+          <span class="pledge__no">02</span>
           <h3>오래 쓸 수 있게</h3>
           <p>닳고 바래도 괜찮은 소재를 고르고, 부품은 따로 바꿀 수 있게 만듭니다.</p>
         </li>
-        <li>
-          <span class="rows__num">03</span>
+        <li class="pledge">
+          <span class="pledge__no">03</span>
           <h3>덜 만들고 덜 버리게</h3>
           <p>꼭 필요한 종류만 만들어, 집 안에 쌓이는 물건을 줄입니다.</p>
         </li>
       </ol>
     </section>
 
-    <!-- 5. STORY: 전폭 이미지 + 큰 문장 -->
+    <!-- 5. STORY: 어두운 띠 + 스크롤하면 글자가 하나씩 켜지는 문장 -->
     <section class="story" id="story">
+      <p class="story__text" data-lit>좋은 물건은 눈에 띄기보다, 없으면 허전한 쪽에 가깝다고 생각합니다.</p>
       <!-- TODO: 브랜드 이야기 와이드 사진 (16:9, 2000x1125) -->
       <figure class="slot slot--wide" role="img" aria-label="브랜드 이야기 사진 자리">
         <figcaption>브랜드 이야기 사진<span>16:9 · 2000×1125</span></figcaption>
       </figure>
-      <blockquote>
-        <p>좋은 물건은 눈에 띄기보다, 없으면 허전한 쪽에 가깝다고 생각합니다.</p>
-      </blockquote>
     </section>
 
-    <!-- 6. NEWSLETTER: 입력 폼 (오류/성공 상태 포함) -->
+    <!-- 6. NEWSLETTER: 큰 글자 + 알약형 입력 -->
     <section class="news" id="news">
-      <div class="news__copy">
-        <h2>새 물건이 나오면<br>먼저 알려 드릴게요</h2>
-        <p>한 달에 한 번, 새 제품과 이야기만 보냅니다.</p>
-      </div>
+      <h2>새 물건이 나오면<br>먼저 알려 드릴게요</h2>
+      <p class="news__sub">한 달에 한 번, 새 제품과 이야기만 보냅니다.</p>
       <form class="form" novalidate>
         <label for="email">이메일 주소</label>
         <div class="form__row">
           <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
                  aria-describedby="email-help email-error" required>
-          <button class="btn btn--primary" type="submit">신청하기</button>
+          <button class="btn" type="submit">신청하기</button>
         </div>
         <p class="form__help" id="email-help">예: name@example.com</p>
         <p class="form__error" id="email-error" role="alert" hidden></p>
@@ -130,8 +113,8 @@
   </main>
 
   <footer class="footer">
-    <p class="footer__logo">nouhes</p>
     <p class="footer__copy">&copy; 2026 nouhes. All rights reserved.</p>
+    <p class="footer__mark" aria-hidden="true">nouhes</p>
   </footer>
 
   <script src="main.js"></script>
